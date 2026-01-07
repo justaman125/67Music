@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>67Music</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #000;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.sidebar li:hover {
+  color: #1db954;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.topbar input {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.profile {
+  background: #1db954;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #181818;
+  width: 160px;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  background: #222;
+  transform: translateY(-3px);
+}
+
+.cover {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #333, #555);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* EQ SETTINGS */
+.eq {
+  margin-top: 40px;
+  background: #181818;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 500px;
+}
+
+.eq h3 {
+  margin-bottom: 15px;
+}
+
+.slider {
+  margin-bottom: 15px;
+}
+
+.slider label {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.slider input {
+  width: 100%;
+}
+
+/* PLAYER */
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  background: #181818;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.song {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mini-cover {
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.song-name {
+  font-size: 14px;
+}
+
+.artist {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.controls {
+  font-size: 22px;
+  display: flex;
+  gap: 15px;
+}
+
+.volume {
+  font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">67Music</div>
+  <ul>
+    <li>🏠 Home</li>
+    <li>🔍 Search</li>
+    <li>📚 Library</li>
+    <li>⚙️ Settings</li>
+  </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="topbar">
+    <input type="text" placeholder="Search music, artists..." />
+    <div class="profile">U</div>
+  </div>
+
+  <h2>Made for u</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="cover"></div>
+      <p>Brainrot Hits 💀</p>
+    </div>
+    <div class="card">
+      <div class="cover"></div>
+      <p>Night Vibes 🌙</p>
+    </div>
+    <div class="card">
+      <div class="cover"></div>
+      <p>Gym Sigma 💪</p>
+    </div>
+    <div class="card">
+      <div class="cover"></div>
+      <p>Chill Mode 😴</p>
+    </div>
+  </div>
+
+  <!-- EQ -->
+  <div class="eq">
+    <h3>Equalizer 🎧</h3>
+
+    <div class="slider">
+      <label>Bass</label>
+      <input type="range" min="-10" max="10">
+    </div>
+
+    <div class="slider">
+      <label>Mids</label>
+      <input type="range" min="-10" max="10">
+    </div>
+
+    <div class="slider">
+      <label>Highs</label>
+      <input type="range" min="-10" max="10">
+    </div>
+  </div>
+</div>
+
+<!-- PLAYER -->
+<div class="player">
+  <div class="song">
+    <div class="mini-cover"></div>
+    <div>
+      <p class="song-name">Unknown Song</p>
+      <p class="artist">Unknown Artist</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    ⏮️ ▶️ ⏭️
+  </div>
+
+  <div class="volume">
+    🔊
+  </div>
+</div>
+
+</body>
+</html>
